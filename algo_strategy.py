@@ -53,9 +53,14 @@ class AlgoStrategy(gamelib.AlgoCore):
         gamelib.debug_write('Performing turn {} of your custom algo strategy'.format(game_state.turn_number))
         #game_state.suppress_warnings(True)  #Uncomment this line to suppress warnings.
 
-        self.starter_strategy(game_state)
+        #self.starter_strategy(game_state)
 
-        game_state.submit_turn()
+        destructor_locations = [[3,12][6,12][12,12][15,12][18,12][21,12][24,12]
+        filter_locations = [[0,13][1,13][2,13][3,13][4,13][5,13]
+                            
+        
+        game_state.submit_turn(DESTRUCTOR, destructor_locations)
+        game_state.submit_turn(DESTRUCTOR, destructor_locations)
 
     """
     NOTE: All the methods after this point are part of the sample starter-algo
